@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .header {
+            width: 100%;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+
+        .container1 .row div {
+            color: rgb(208, 208, 208);
+            line-height: 44px;
+            text-align: center;
+        }
+
+        .container1 .row div img {
+            width: 18px;
+        }
+
+        .container2 div {
+            display: none;
+        }
+
+        .container2 .row div {
+            text-align: center;
+            line-height: 44px;
+        }
+
+        .container2 .row div:nth-child(1) {
+            text-align: left;
+        }
+
+        .container2 .row div:nth-child(3) {
+            text-align: right;
+        }
+
+        .container2 .row div img {
+            width: 18px;
+        }
+
+        @media screen and (max-width:768px) {
+            .container1 div {
+                display: none;
+            }
+
+            .container2 div {
+                display: block;
+            }
+        }
+
+        .text1 {
+            height: 220px;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .apple-logo {
+            width: 92px;
+            height: 92px;
+            margin: 10px auto;
+        }
+
+        .apple-logo img {
+            width: 100%;
+        }
+
+        .h h1 {
+            text-align: center;
+            font-weight: bold;
+            font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .i {
+            text-align: center;
+        }
+
+        .m1 {
+            height: 450px;
+            background-color: rgb(250, 250, 250);
+            margin-bottom: 10px;
+        }
+
+        .m1 div {
+            width: 930px;
+            margin: 0 auto;
+        }
+
+        .m1 div>img {
+            width: 100%;
+            
+        }
+
+        .m1 div:nth-child(2) {
+            display: none;
+        }
+
+        .m1 div:nth-child(2) {
+            width: 350px;
+            text-align: center;
+        }
+        .text2{
+            width: 100%;
+            background-color: #000;
+        }
+        .text2 .h{
+            margin-top: 0px;
+            color: #fff;
+            text-align: center;
+            
+        }
+        .text2 .h1{
+            margin-top: 50px;
+            font-size: 40px; 
+            font-weight: bold;  
+        }
+        .text2 .h2{
+            margin-top: 5px;
+            font-size: 26px;
+        }
+        .text2 .h3{
+            color: rgb(134, 134, 139);
+            font-size: 18px;
+        }
+        .text2 .h4 {
+            margin-top: 20px;
+        }
+        .text2 .h4 a{
+            font-size: 22px;
+            margin-right: 20px;
+        }
+        .w{
+            background-color: rgb(250, 250, 250);
+        }
+        .w .h{
+            color: #000;
+        }
+        .w .h3{
+            color: rgb(176, 148, 147);
+        }
+        .m2{
+            background-color: #000;
+        }
+        .m2 div{
+            width: 600px;
+            margin: 0 auto;
+        }
+        .m2 div img{
+            width: 100%;
+        }
+        .m3{
+            background-color: rgb(250, 250, 250);
+            margin-bottom: 10px;
+        }
+        .m3 div{
+            width: 750px;
+            margin: 0 auto;
+
+        }
+        .m3 div:nth-child(2){
+            width: 300px;
+            margin: 0 auto;
+            display: none;
+        }
+        .m3 div img{
+            width: 100%;
+        }
+        .pai>div{
+            float: left;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+            width: 50%;
+        }
+        .pai>div img{
+            width: 100%;
+        }
+       
+        @media screen and (max-width:735px) {
+            .apple-logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .h h1 {
+                width: 400px;
+                margin: 0 auto;
+            }
+
+            .m1 {
+                height: 380px;
+            }
+
+            .m1 div:nth-child(1) {
+                display: none;
+            }
+
+            .m1 div:nth-child(2) {
+                display: block;
+            }
+
+            .text2 .h1{
+                font-size: 30px;
+            }
+            .text2 .h2{
+                font-size: 20px;
+            }
+            .text2 .h3{
+                font-size: 14px;
+            }
+
+            .text2 .h4 a{
+                font-size: 18px;
+            }
+
+            .m2 div{
+            width: 450px;
+            }
+            .m3 div:nth-child(1){
+                display: none;
+            }
+            .m3 div:nth-child(2){
+                display: block;
+            }
+            .pai>div{
+                width: 100%;
+                padding: 0;
+                padding-bottom: 10px;
+            }
+            .pai>div img{
+                width:735px;
+                height: 500px;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- 标题头部 -->
+    <div class="header">
+        <div class="container-fluid container1">
+            <div class="row">
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1  col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                    <img src="img/苹果.png" alt="">
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    Mac
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    iPad
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    iPhone
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    Watch
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    TV
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    Music
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    Support
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <img src="img/搜索.png" alt="">
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <img src="img/购物袋.png" alt="">
+                </div>
+
+            </div>
+        </div>
+        <div class="container-fluid container2">
+            <div class="row">
+                <div class="col-xs-4">
+                    <img src="img/搜索.png" alt="">
+                </div>
+                <div class="col-xs-4">
+                    <img src="img/苹果.png" alt="">
+                </div>
+                <div class="col-xs-4">
+                    <img src="img/购物袋.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 第一部分的 文字部分 -->
+    <div class="container-fluid text1">
+        <div class="apple-logo"><img src="img/apple.jpg" alt=""></div>
+        <div class="h">
+            <h1>Make Someone's holiday</h1>
+        </div>
+        <div class="i">
+            <h3><a href="">Shop gifts ></a></h3>
+        </div>
+    </div>
+    <!-- 第一部分的 图片部分 -->
+    <div class="container-fluid m1">
+        <div><img src="img/3.jpg" alt=""></div>
+        <div><img src="img/4.jpg" alt=""></div>
+    </div>
+    <!-- 第二部分的 文字部分 -->
+    <div class="container-fluid text2">
+            <div class="h h1">
+                    iPhone 11 Pro
+            </div>
+            <div class="h h2">
+                Pro cameras. Pro display. Pro performance
+            </div>
+            <div class="h h3">
+                From $24.95/mo. or $599 with trade-in.
+            </div>
+            <div class="h h4">
+                <a href="">Learn more ></a>
+                <a href="">Buy ></a>
+            </div>
+    </div>
+    <!-- 第二部分的 图片部分 -->
+    <div class="container-fluid m2">
+            <div><img src="img/6.jpg" alt=""></div>
+    </div>
+    <!-- 第三部分的 文字部分 -->
+    <div class="container-fluid text2 w">
+            <div class="h h1">
+                    iPhone 11
+            </div>
+            <div class="h h2">
+                Just the right amount of everything
+            </div>
+            <div class="h h3">
+                From $16.62/mo. or $399 with trade-in.
+            </div>
+            <div class="h h4">
+                <a href="">Learn more ></a>
+                <a href="">Buy ></a>
+            </div>
+    </div>
+    <!-- 第三部分的 图片部分 -->
+    <div class="container-fluid m3">
+            <div><img src="img/7.jpg" alt=""></div>
+            <div><img src="img/8.jpg" alt=""></div>
+    </div>
+    <!-- 图片展示 排列 -->
+    <div class="pai">
+      <div><img src="img/i1.jpg" alt=""></div>
+      <div><img src="img/i2.jpg" alt=""></div>
+      <div><img src="img/i3.jpg" alt=""></div>
+      <div><img src="img/i4.jpg" alt=""></div>
+      <div><img src="img/i5.jpg" alt=""></div>
+      <div><img src="img/i6.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>
